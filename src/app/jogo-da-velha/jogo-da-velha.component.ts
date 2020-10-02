@@ -48,66 +48,80 @@ export class JogoDaVelhaComponent implements OnInit {
    * @return void
    */
 
-   iniciarJogo(): void {
-     this.jogoDaVelhaService.iniciarJogo();
-   }
+  iniciarJogo(): void {
+    this.jogoDaVelhaService.iniciarJogo();
+  }
 
-   /**
-    * Realiza uma jogada ao clicar em um local no tabuleiro
-    * 
-    * @param number posX
-    * @param number posY
-    * @return void
-    */
+  /**
+   * Realiza uma jogada ao clicar em um local no tabuleiro
+   * 
+   * @param number posX
+   * @param number posY
+   * @return void
+   */
 
-    jogar(posX: number, posY: number): void {
-      this.jogoDaVelhaService.jogar(posX, posY);
-    }
+  jogar(posX: number, posY: number): void {
+    this.jogoDaVelhaService.jogar(posX, posY);
+  }
 
-    /**
-     * Retorna se a peça X deve ser exibida para a
-     * coordenada informada.
-     * 
-     * @param number posX
-     * @param number posY
-     * @return boolean
-     */
+  /**
+   * Retorna se a peça X deve ser exibida para a
+   * coordenada informada.
+   * 
+   * @param number posX
+   * @param number posY
+   * @return boolean
+   */
 
-     exibirX(posX: number, posY: number): boolean {
-       return this.jogoDaVelhaService.exibirX(posX, posY);
-     }
+  exibirX(posX: number, posY: number): boolean {
+    return this.jogoDaVelhaService.exibirX(posX, posY);
+  }
 
-     /**
-      * Retorna se a peca O deve ser exibida para a 
-      * coordenada informada.
-      * 
-      * @param number posX
-      * @param number posY
-      * @return boolean
-      */
+  /**
+   * Retorna se a peca O deve ser exibida para a 
+   * coordenada informada.
+   * 
+   * @param number posX
+   * @param number posY
+   * @return boolean
+   */
 
-     exibirO(posX: number, posY: number): boolean {
-      return this.jogoDaVelhaService.exibirO(posX, posY);
-    }
+  exibirO(posX: number, posY: number): boolean {
+    return this.jogoDaVelhaService.exibirO(posX, posY);
+  }
 
-    /**
-     * Retirna se a marcação de vitória deve ser exibida para a 
-     * coordenada informada.
-     * 
-     * @param number posX
-     * @param number posY
-     * @return boolean
-     */
+  /**
+   * Retirna se a marcação de vitória deve ser exibida para a 
+   * coordenada informada.
+   * 
+   * @param number posX
+   * @param number posY
+   * @return boolean
+   */
 
-    exibirVitoria(posX: number, posY: number): boolean {
-      return this.jogoDaVelhaService.exibirVitoria(posX, posY);
-    } 
-    
-    /**
-     * Retorna o número do jogador a jogar.
-     * 
-     * @return number
-     */
+  exibirVitoria(posX: number, posY: number): boolean {
+    return this.jogoDaVelhaService.exibirVitoria(posX, posY);
+  }
+
+  /**
+   * Retorna o número do jogador a jogar.
+   * 
+   * @return number
+   */
+
+  get jogador(): number {
+    return this.jogoDaVelhaService.jogador;
+  }
+
+  /**
+   * Inicia um novo jogo
+   * 
+   * @return void
+   */
+
+  novoJogo(): void {
+    this.jogoDaVelhaService.novoJogo();
+  }
 
 }
 
